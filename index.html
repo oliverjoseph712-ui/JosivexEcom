@@ -307,9 +307,11 @@
     animation: proof-scroll 46s linear infinite;
     will-change: transform; -webkit-backface-visibility: hidden; backface-visibility: hidden;
   }
+  @media (max-width: 640px) {
+    .proof-marquee { animation-duration: 20s; }
+  }
   .proof-marquee-wrap:hover .proof-marquee,
-  .proof-marquee-wrap:focus-within .proof-marquee,
-  .proof-marquee-wrap:active .proof-marquee { animation-play-state: paused; }
+  .proof-marquee-wrap:focus-within .proof-marquee { animation-play-state: paused; }
   @keyframes proof-scroll {
     from { transform: translate3d(0,0,0); }
     to { transform: translate3d(-50%,0,0); }
@@ -660,13 +662,13 @@
           <p class="price-tagline">Learn. Understand. Build.</p>
           <p class="price-note">For beginners who want to learn the fundamentals and build their own e-commerce business.</p>
           <ul class="price-features">
-            <li>📘 E-commerce Starter Guide</li>
-            <li>🔎 Product Research Training</li>
-            <li>🏪 Shopify Store Setup Guidance</li>
-            <li>📄 Product Page Structure</li>
-            <li>💰 Pricing &amp; Offer Guidance</li>
-            <li>📣 Marketing Fundamentals</li>
-            <li>💬 Community Support</li>
+            <li>E-commerce Starter Guide</li>
+            <li>Product Research Training</li>
+            <li>Shopify Store Setup Guidance</li>
+            <li>Product Page Structure</li>
+            <li>Pricing &amp; Offer Guidance</li>
+            <li>Marketing Fundamentals</li>
+            <li>Community Support</li>
           </ul>
           <p class="price-closing">You learn the process and build it yourself, with the right direction.</p>
           <a href="#apply" class="btn btn-ghost">Apply for Starter</a>
@@ -680,13 +682,13 @@
           <p class="price-note">For people who want hands-on guidance while building and launching their store.</p>
           <p class="price-includes">Everything in Starter, plus:</p>
           <ul class="price-features">
-            <li>🔎 Advanced Product Research</li>
-            <li>🎨 Store &amp; Product Page Reviews</li>
-            <li>📣 Marketing &amp; Ad Strategy</li>
-            <li>📊 Analytics &amp; Tracking Setup</li>
-            <li>🤝 1:1 Live Call Guidance</li>
-            <li>🛠️ Troubleshooting &amp; Implementation Support</li>
-            <li>🚀 Launch &amp; Product Testing Guidance</li>
+            <li>Advanced Product Research</li>
+            <li>Store &amp; Product Page Reviews</li>
+            <li>Marketing &amp; Ad Strategy</li>
+            <li>Analytics &amp; Tracking Setup</li>
+            <li>1:1 Live Call Guidance</li>
+            <li>Troubleshooting &amp; Implementation Support</li>
+            <li>Launch &amp; Product Testing Guidance</li>
           </ul>
           <p class="price-closing">You build it, but you're not figuring everything out alone.</p>
           <a href="#apply" class="btn btn-primary">Apply for Growth</a>
@@ -699,13 +701,13 @@
           <p class="price-note">For people who want the most hands-on mentorship and done-for-you support.</p>
           <p class="price-includes">Everything in Growth, plus:</p>
           <ul class="price-features">
-            <li>🔎 Done-For-You Product Research</li>
-            <li>🏪 Done-For-You Shopify Store Setup</li>
-            <li>📣 Personalized Marketing Strategy</li>
-            <li>🤝 Private 1:1 Live Calls</li>
-            <li>🧑‍💻 Hands-On Implementation Support</li>
-            <li>🔧 Store Audits &amp; Improvements</li>
-            <li>📈 Scaling Guidance</li>
+            <li>Done-For-You Product Research</li>
+            <li>Done-For-You Shopify Store Setup</li>
+            <li>Personalized Marketing Strategy</li>
+            <li>Private 1:1 Live Calls</li>
+            <li>Hands-On Implementation Support</li>
+            <li>Store Audits &amp; Improvements</li>
+            <li>Scaling Guidance</li>
           </ul>
           <p class="price-closing">Less figuring it out alone. More direct guidance, implementation, and support.</p>
           <a href="#apply" class="btn btn-ghost">Apply for Elite</a>
@@ -724,18 +726,18 @@
             <div class="compare-col">
               <h4><span class="tier-dot dot-green"></span>Starter</h4>
               <ul>
-                <li>📘 E-commerce Starter Guide</li>
-                <li>🔎 Product Research Training</li>
-                <li>🧠 Product Selection Framework</li>
-                <li>🏪 Shopify Store Setup Guidance</li>
-                <li>🎨 Store Design &amp; Branding Guidance</li>
-                <li>📄 Product Page Structure</li>
-                <li>💰 Pricing &amp; Offer Guidance</li>
-                <li>🎯 Target Audience &amp; Positioning</li>
-                <li>📣 Marketing Fundamentals</li>
-                <li>📊 Basic Analytics &amp; Tracking</li>
-                <li>📚 Learning Resources</li>
-                <li>💬 Community Support</li>
+                <li>E-commerce Starter Guide</li>
+                <li>Product Research Training</li>
+                <li>Product Selection Framework</li>
+                <li>Shopify Store Setup Guidance</li>
+                <li>Store Design &amp; Branding Guidance</li>
+                <li>Product Page Structure</li>
+                <li>Pricing &amp; Offer Guidance</li>
+                <li>Target Audience &amp; Positioning</li>
+                <li>Marketing Fundamentals</li>
+                <li>Basic Analytics &amp; Tracking</li>
+                <li>Learning Resources</li>
+                <li>Community Support</li>
               </ul>
             </div>
 
@@ -743,18 +745,18 @@
               <h4><span class="tier-dot dot-blue"></span>Growth</h4>
               <p class="compare-includes">Everything in Starter, plus:</p>
               <ul>
-                <li>🔎 Advanced Product Research</li>
-                <li>🏪 Step-by-Step Store Setup Guidance</li>
-                <li>🎨 Store &amp; Product Page Reviews</li>
-                <li>🧲 Offer &amp; Conversion Guidance</li>
-                <li>📣 Marketing &amp; Ad Strategy</li>
-                <li>🎬 Creative &amp; Ad Angle Guidance</li>
-                <li>📊 Analytics &amp; Tracking Setup</li>
-                <li>📈 Data Analysis &amp; Decision-Making Guidance</li>
-                <li>🤝 1:1 Live Call Guidance</li>
-                <li>🔄 Regular Store/Project Reviews</li>
-                <li>🛠️ Troubleshooting &amp; Implementation Support</li>
-                <li>🚀 Launch &amp; Product Testing Guidance</li>
+                <li>Advanced Product Research</li>
+                <li>Step-by-Step Store Setup Guidance</li>
+                <li>Store &amp; Product Page Reviews</li>
+                <li>Offer &amp; Conversion Guidance</li>
+                <li>Marketing &amp; Ad Strategy</li>
+                <li>Creative &amp; Ad Angle Guidance</li>
+                <li>Analytics &amp; Tracking Setup</li>
+                <li>Data Analysis &amp; Decision-Making Guidance</li>
+                <li>1:1 Live Call Guidance</li>
+                <li>Regular Store/Project Reviews</li>
+                <li>Troubleshooting &amp; Implementation Support</li>
+                <li>Launch &amp; Product Testing Guidance</li>
               </ul>
             </div>
 
@@ -762,22 +764,22 @@
               <h4><span class="tier-dot dot-purple"></span>Elite</h4>
               <p class="compare-includes">Everything in Growth, plus:</p>
               <ul>
-                <li>🔎 Done-For-You Product Research</li>
-                <li>🏪 Done-For-You Shopify Store Setup</li>
-                <li>🎨 Store Structure &amp; Branding Setup</li>
-                <li>📄 Product Page Setup</li>
-                <li>💰 Offer &amp; Pricing Structure</li>
-                <li>📊 Tracking &amp; Analytics Setup</li>
-                <li>📣 Personalized Marketing Strategy</li>
-                <li>🎬 Creative &amp; Ad Direction</li>
-                <li>🧪 Product Testing Strategy</li>
-                <li>📈 Performance &amp; Data Reviews</li>
-                <li>🤝 Private 1:1 Live Calls</li>
-                <li>🧑‍💻 Hands-On Implementation Support</li>
-                <li>🔧 Store Audits &amp; Improvements</li>
-                <li>🚀 Launch Support</li>
-                <li>📈 Scaling Guidance</li>
-                <li>💬 Direct Private Support</li>
+                <li>Done-For-You Product Research</li>
+                <li>Done-For-You Shopify Store Setup</li>
+                <li>Store Structure &amp; Branding Setup</li>
+                <li>Product Page Setup</li>
+                <li>Offer &amp; Pricing Structure</li>
+                <li>Tracking &amp; Analytics Setup</li>
+                <li>Personalized Marketing Strategy</li>
+                <li>Creative &amp; Ad Direction</li>
+                <li>Product Testing Strategy</li>
+                <li>Performance &amp; Data Reviews</li>
+                <li>Private 1:1 Live Calls</li>
+                <li>Hands-On Implementation Support</li>
+                <li>Store Audits &amp; Improvements</li>
+                <li>Launch Support</li>
+                <li>Scaling Guidance</li>
+                <li>Direct Private Support</li>
               </ul>
             </div>
 
@@ -881,7 +883,9 @@
       </div>
 
       <div>
-        <form id="applyForm" novalidate>
+        <form id="applyForm" action="https://formspree.io/f/xvkgrzkg" method="POST" novalidate>
+          <input type="hidden" name="_subject" id="formSubject" value="New mentorship application">
+          <input type="hidden" name="_source" value="JosivexEcom website">
           <div class="field-row">
             <div class="field">
               <label for="fname">Full name</label>
@@ -956,11 +960,11 @@
 
         <div id="confirm">
           <h3>Thanks, your application is in.</h3>
-          <p class="soft">I'll take a look and follow up. Pick whichever way is easiest for you to keep the conversation going.</p>
+          <p class="soft">I'll take a look and follow up. Pick whichever way is easiest for you, your answers will already be filled in for you.</p>
           <div class="confirm-ctas">
-            <a href="https://wa.me/447462699360" target="_blank" rel="noopener" class="btn btn-whatsapp">Continue on WhatsApp</a>
-            <a href="https://t.me/Josivex" target="_blank" rel="noopener" class="btn btn-telegram">Continue on Telegram</a>
-            <a href="mailto:josivexecom@gmail.com" class="btn btn-email">Email Us</a>
+            <a href="https://wa.me/447462699360" target="_blank" rel="noopener" class="btn btn-whatsapp" id="waConfirmLink">Continue on WhatsApp</a>
+            <a href="https://t.me/Josivex" target="_blank" rel="noopener" class="btn btn-telegram" id="tgConfirmLink">Continue on Telegram</a>
+            <a href="mailto:josivexecom@gmail.com" class="btn btn-email" id="emailConfirmLink">Email Us</a>
           </div>
         </div>
       </div>
@@ -1169,9 +1173,63 @@
       form.reportValidity();
       return;
     }
+
+    var v = function (id) {
+      var el = document.getElementById(id);
+      return el && el.value ? el.value.trim() : '';
+    };
+
+    var applicantName = v('fname') || 'a new applicant';
+
+    var lines = [
+      'New mentorship application',
+      '',
+      'Name: ' + v('fname'),
+      'Email: ' + v('email'),
+      'WhatsApp: ' + v('whatsapp'),
+      'Experience level: ' + v('experience'),
+      'Has a Shopify store: ' + v('hasstore'),
+      'Currently selling: ' + (v('selling') || 'Not sure yet'),
+      'Biggest challenge: ' + v('challenge'),
+      'Goal: ' + v('goal'),
+      'Starting budget: ' + v('budget'),
+      'Notes: ' + (v('notes') || 'None')
+    ];
+    var message = lines.join('\n');
+
+    var waLink = document.getElementById('waConfirmLink');
+    var tgLink = document.getElementById('tgConfirmLink');
+    var emailLink = document.getElementById('emailConfirmLink');
+    var subjectField = document.getElementById('formSubject');
+
+    var waHref = 'https://wa.me/447462699360?text=' + encodeURIComponent(message);
+    if (waLink) waLink.href = waHref;
+    if (tgLink) tgLink.href = 'https://t.me/Josivex?text=' + encodeURIComponent(message);
+    if (emailLink) {
+      var subject = 'Mentorship application from ' + applicantName;
+      emailLink.href = 'mailto:josivexecom@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(message);
+      if (subjectField) subjectField.value = subject;
+    }
+
+    // Open WhatsApp for the applicant right away, in direct response to their tap,
+    // so the browser doesn't treat it as a blocked popup.
+    window.open(waHref, '_blank');
+
+    // Show the confirmation panel immediately so the applicant always has
+    // Telegram / email as a fallback even if the WhatsApp tab was blocked.
     form.style.display = 'none';
     confirm.classList.add('show');
     confirm.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+    // Send the application to the inbox via Formspree in the background.
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).catch(function () {
+      // Submission to Formspree failed silently; the applicant still has
+      // WhatsApp / Telegram / email above to reach out directly.
+    });
   });
 </script>
 
