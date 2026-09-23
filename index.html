@@ -214,9 +214,9 @@
   }
   .float-card:hover { box-shadow: 0 22px 50px rgba(11,46,35,0.24); }
   .float-card img, .float-card video { display: block; width: 100%; height: auto; }
-  .card-a { width: 64%; top: 4px; left: 0; z-index: 3; animation: float-a 7.5s ease-in-out infinite; }
-  .card-b { width: 46%; top: 42%; right: 0; z-index: 2; animation: float-b 8.5s ease-in-out infinite; }
-  .card-c { width: 42%; bottom: 6px; left: 10%; z-index: 4; animation: float-c 6.5s ease-in-out infinite; }
+  .card-a { width: 42%; bottom: 6px; left: 10%; z-index: 3; animation: float-a 7.5s ease-in-out infinite; }
+  .card-b { width: 44%; top: 42%; right: 0; z-index: 2; animation: float-b 8.5s ease-in-out infinite; }
+  .card-c { width: 64%; top: 4px; left: 0; z-index: 4; animation: float-c 6.5s ease-in-out infinite; }
   @keyframes float-a {
     0%, 100% { transform: rotate(-1.4deg) translateY(0); }
     50% { transform: rotate(1deg) translateY(-8px); }
@@ -292,6 +292,35 @@
   .learn-row span.name { font-size: 17px; }
   .learn-row span.tag { font-size: 13px; color: var(--text-soft); white-space: nowrap; }
 
+  /* ---------- What dropshipping is ---------- */
+  .dropship-steps {
+    display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; margin-bottom: 56px;
+  }
+  @media (max-width: 900px) { .dropship-steps { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px) { .dropship-steps { grid-template-columns: 1fr; } }
+  .ds-step { border: 1px solid var(--line); border-radius: 4px; padding: 22px 18px; }
+  .ds-num {
+    width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--accent); color: var(--accent);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Fraunces', serif; font-size: 14px; margin-bottom: 14px;
+  }
+  .ds-step p { font-size: 14.5px; color: var(--text-soft); line-height: 1.5; }
+
+  .profit-flow-title { font-family: 'Fraunces', serif; font-size: 20px; margin-bottom: 22px; }
+  .profit-flow { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
+  .pf-box {
+    border: 1px solid var(--line); border-radius: 4px; padding: 14px 16px;
+    font-size: 13.5px; color: var(--text-soft); background: var(--surface);
+  }
+  .pf-box strong { color: var(--text); font-family: 'Fraunces', serif; font-weight: 500; }
+  .pf-box.pf-highlight { border-color: var(--accent); color: var(--text); background: var(--bg); }
+  .pf-arrow { color: var(--accent); font-size: 16px; flex-shrink: 0; }
+  @media (max-width: 760px) {
+    .profit-flow { flex-direction: column; align-items: stretch; }
+    .pf-arrow { align-self: center; transform: rotate(90deg); }
+  }
+  .profit-flow-note { margin-top: 24px; font-size: 14.5px; color: var(--text); font-family: 'Fraunces', serif; }
+
   /* ---------- Why section ---------- */
   .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
   @media (max-width: 860px) { .why-grid { grid-template-columns: 1fr; gap: 32px; } }
@@ -342,7 +371,9 @@
   @media (max-width: 640px) {
     .proof-marquee { animation-duration: 20s; }
   }
-  .proof-marquee-wrap:hover .proof-marquee,
+  @media (hover: hover) {
+    .proof-marquee-wrap:hover .proof-marquee { animation-play-state: paused; }
+  }
   .proof-marquee-wrap:focus-within .proof-marquee { animation-play-state: paused; }
   @keyframes proof-scroll {
     from { transform: translate3d(0,0,0); }
@@ -378,6 +409,40 @@
   }
   .view-full-wrap { margin-top: 22px; }
   .view-full-wrap .btn { display: inline-flex; }
+
+  /* ---------- Full results page ---------- */
+  .full-results-page {
+    position: fixed; inset: 0; z-index: 99; background: var(--bg);
+    overflow-y: auto; display: none; padding: 24px 24px calc(60px + env(safe-area-inset-bottom, 0px));
+  }
+  .full-results-page.open { display: block; }
+  .frp-header {
+    display: flex; align-items: center; justify-content: space-between;
+    max-width: 1180px; margin: 0 auto 28px; padding-top: calc(10px + env(safe-area-inset-top, 0px));
+  }
+  .frp-title { font-family: 'Fraunces', serif; font-size: 24px; }
+  .frp-close {
+    display: flex; align-items: center; gap: 6px;
+    background: none; border: 1px solid var(--line); border-radius: 30px;
+    padding: 9px 18px; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600;
+    color: var(--text); cursor: pointer; transition: border-color 0.15s ease, color 0.15s ease;
+  }
+  .frp-close:hover { border-color: var(--accent); color: var(--accent); }
+  .frp-grid {
+    max-width: 1180px; margin: 0 auto;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;
+  }
+  @media (max-width: 860px) { .frp-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px) { .frp-grid { grid-template-columns: 1fr; } }
+  .frp-item {
+    border: 1px solid var(--line); border-radius: 4px; overflow: hidden; background: var(--surface);
+    cursor: pointer; display: flex; flex-direction: column;
+  }
+  .frp-item img, .frp-item video { width: 100%; height: auto; display: block; background: #000; }
+  .frp-item figcaption {
+    padding: 9px 14px; font-size: 12.5px; color: var(--text-soft);
+    border-top: 1px solid var(--line); background: var(--bg);
+  }
 
   /* ---------- Lightbox ---------- */
   .lightbox {
@@ -687,6 +752,57 @@
       <p class="proof-note">Results vary depending on the individual, execution, product, market conditions, and other factors. What's shown here reflects real work, not a promise of what you'll achieve.</p>
       <div class="view-full-wrap">
         <button type="button" id="viewFullResults" class="btn btn-ghost">View Full Results</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT DROPSHIPPING IS -->
+  <section id="dropshipping-101">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>What dropshipping is</h2>
+        <p>Dropshipping is a way to sell products online without holding any inventory yourself. You list products from a supplier, and when a customer buys, the supplier ships it directly to them, you keep the profit.</p>
+      </div>
+
+      <div class="dropship-steps">
+        <div class="ds-step">
+          <div class="ds-num">1</div>
+          <p>Set up your Shopify store</p>
+        </div>
+        <div class="ds-step">
+          <div class="ds-num">2</div>
+          <p>Find winning products using tools like DSers or CJdropshipping</p>
+        </div>
+        <div class="ds-step">
+          <div class="ds-num">3</div>
+          <p>List and price them for profit</p>
+        </div>
+        <div class="ds-step">
+          <div class="ds-num">4</div>
+          <p>Market using ads and social media</p>
+        </div>
+        <div class="ds-step">
+          <div class="ds-num">5</div>
+          <p>Get sales, your supplier handles shipping</p>
+        </div>
+      </div>
+
+      <div class="profit-flow-wrap">
+        <h3 class="profit-flow-title">How the profit works</h3>
+        <div class="profit-flow">
+          <div class="pf-box">Supplier sells it at <strong>$10</strong></div>
+          <div class="pf-arrow">&#8594;</div>
+          <div class="pf-box">You list it on your store at <strong>$30</strong></div>
+          <div class="pf-arrow">&#8594;</div>
+          <div class="pf-box">Customer buys and pays you <strong>$30</strong></div>
+          <div class="pf-arrow">&#8594;</div>
+          <div class="pf-box">You pay the supplier their <strong>$10</strong></div>
+          <div class="pf-arrow">&#8594;</div>
+          <div class="pf-box">Supplier ships it directly to the customer</div>
+          <div class="pf-arrow">&#8594;</div>
+          <div class="pf-box pf-highlight">You keep the remaining <strong>$20</strong></div>
+        </div>
+        <p class="profit-flow-note">The key? Winning products + smart marketing = $$$</p>
       </div>
     </div>
   </section>
@@ -1279,7 +1395,47 @@
     });
 
     var viewFullBtn = document.getElementById('viewFullResults');
-    if (viewFullBtn) viewFullBtn.addEventListener('click', function () { openAt(0); });
+    var fullResultsPage = document.getElementById('fullResultsPage');
+    var frpGrid = document.getElementById('frpGrid');
+    var frpClose = document.getElementById('frpClose');
+
+    function buildGrid() {
+      if (!frpGrid || frpGrid.children.length) return;
+      items.forEach(function (it, idx) {
+        var cell = document.createElement('figure');
+        cell.className = 'frp-item';
+        var el;
+        if (it.type === 'video') {
+          el = document.createElement('video');
+          el.src = it.src; el.muted = true; el.loop = true; el.playsInline = true;
+          el.setAttribute('preload', 'metadata');
+        } else {
+          el = document.createElement('img');
+          el.src = it.src; el.alt = it.caption; el.loading = 'lazy';
+        }
+        cell.appendChild(el);
+        var cap = document.createElement('figcaption');
+        cap.textContent = it.caption;
+        cell.appendChild(cap);
+        cell.addEventListener('click', function () { openAt(idx); });
+        frpGrid.appendChild(cell);
+      });
+    }
+
+    if (viewFullBtn && fullResultsPage) {
+      viewFullBtn.addEventListener('click', function () {
+        buildGrid();
+        fullResultsPage.classList.add('open');
+        fullResultsPage.setAttribute('aria-hidden', 'false');
+        window.scrollTo({ top: 0, behavior: 'instant' in window ? 'instant' : 'auto' });
+      });
+    }
+    if (frpClose && fullResultsPage) {
+      frpClose.addEventListener('click', function () {
+        fullResultsPage.classList.remove('open');
+        fullResultsPage.setAttribute('aria-hidden', 'true');
+      });
+    }
 
     var closeBtn = document.getElementById('lightboxClose');
     var nextBtn = document.getElementById('lightboxNext');
@@ -1398,6 +1554,14 @@
   });
 </script>
 
+
+<div class="full-results-page" id="fullResultsPage" aria-hidden="true">
+  <div class="frp-header">
+    <div class="frp-title">All Results</div>
+    <button type="button" class="frp-close" id="frpClose" aria-label="Close">&times; Close</button>
+  </div>
+  <div class="frp-grid" id="frpGrid"></div>
+</div>
 
 <div class="lightbox" id="lightbox" aria-hidden="true">
   <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
