@@ -1301,6 +1301,24 @@
   </a>
 </div>
 
+
+
+
+<div class="full-results-page" id="fullResultsPage" aria-hidden="true">
+  <div class="frp-header">
+    <div class="frp-title">All Results</div>
+    <button type="button" class="frp-close" id="frpClose" aria-label="Close">&times; Close</button>
+  </div>
+  <div class="frp-grid" id="frpGrid"></div>
+</div>
+
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+  <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous">&#8592;</button>
+  <div class="lightbox-stage" id="lightboxStage"></div>
+  <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next">&#8594;</button>
+  <div class="lightbox-caption" id="lightboxCaption"></div>
+</div>
 <script>
   // shake boxes
   document.querySelectorAll('.shake-box').forEach(function (box) {
@@ -1554,21 +1572,5 @@
   });
 </script>
 
-
-<div class="full-results-page" id="fullResultsPage" aria-hidden="true">
-  <div class="frp-header">
-    <div class="frp-title">All Results</div>
-    <button type="button" class="frp-close" id="frpClose" aria-label="Close">&times; Close</button>
-  </div>
-  <div class="frp-grid" id="frpGrid"></div>
-</div>
-
-<div class="lightbox" id="lightbox" aria-hidden="true">
-  <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
-  <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous">&#8592;</button>
-  <div class="lightbox-stage" id="lightboxStage"></div>
-  <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next">&#8594;</button>
-  <div class="lightbox-caption" id="lightboxCaption"></div>
-</div>
 </body>
 </html>
